@@ -6,11 +6,13 @@
 
 # Usage
 
-- add this code to **Startup.cs Configure** method 
+- In the **Startup.cs Configure ** method add this code
   
   ```csharp
   app.UseCustomExceptionMiddleware();
 
   ```
+
 - Add this attribute **[CustomResponseResult]** in you controllers
+
 
