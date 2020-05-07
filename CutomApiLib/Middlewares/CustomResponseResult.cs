@@ -7,7 +7,7 @@ using System.Text;
 
 namespace CutomApiLib.Middlewares
 {
-    public class CustomResponseResult : IActionFilter
+    public class CustomResponseResult : Attribute, IActionFilter
     {
         void IActionFilter.OnActionExecuted(ActionExecutedContext context)
         {
