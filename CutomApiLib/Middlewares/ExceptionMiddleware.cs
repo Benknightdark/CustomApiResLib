@@ -26,9 +26,7 @@ namespace CutomApiLib.Middlewares
                     {
                         status = 500,
                         title = context.Response.StatusCode.ToString(),
-                        errors=ErrorContent
-
-                        
+                        errors=ErrorContent                       
                     };
                     await context.Response.WriteAsync(JsonSerializer.Serialize(bodyContent), Encoding.UTF8);
                 });
