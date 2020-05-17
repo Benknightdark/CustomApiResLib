@@ -1,6 +1,6 @@
 # Custom Api Lib
 
-## Mak response data and  to error message  same format
+## Mak response data and   error message to  same format
 
 
 
