@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
+using CustomWebApiLib.Models;
 
 namespace CutomApiLib.Middlewares
 {
@@ -11,6 +13,11 @@ namespace CutomApiLib.Middlewares
     {
         void IActionFilter.OnActionExecuted(ActionExecutedContext context)
         {
+             var ignore = context.ActionDescriptor.FilterDescriptors
+                .Select (f => f.Filter)
+                .OfType<ServiceFilterAttribute> ()
+                .Any (f => f.ServiceType.Equals (typeof (IgonreApiAuthorize)));
+            if(ignore) return;
 
             if (context.Result is ObjectResult objectResult)
             {
