@@ -13,7 +13,6 @@ namespace CutomApiLib.Middlewares {
         public static void UseCustomExceptionMiddleware (this IApplicationBuilder app) {
             app.UseExceptionHandler (errorApp => {
                 errorApp.Run (async context => {
-                    context.HandleResponse ();
 
                     var exceptionHandlerPathFeature = context.Features.Get<IExceptionHandlerPathFeature> ();
                     context.Response.StatusCode = 500;

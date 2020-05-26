@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <PackageId>CustomApiLib</PackageId>
-    <Version>0.0.0.1</Version>
+    <Version>0.0.0.2</Version>
     <Authors>Ben</Authors>
     <Company>Ben</Company>
     <Description>Mak response data and  to error message  same format</Description>
